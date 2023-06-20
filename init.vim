@@ -26,6 +26,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
 Plug 'nikolvs/vim-sunbather'
 Plug 'mildewchan/takodachi.vim' 
+Plug 'navarasu/onedark.nvim'
 
 Plug 'famiu/nvim-reload'
 
@@ -49,7 +50,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Track coding time
-" Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 
 " Markdown live preview via browser
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -83,6 +84,16 @@ Plug 'puremourning/vimspector'
  Plug 'neovim/nvim-lspconfig'
  Plug 'tjdevries/lsp_extensions.nvim'
  Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+ Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
+ Plug 'williamboman/mason-lspconfig.nvim'
+ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+ " Autocompletion
+ Plug 'hrsh7th/nvim-cmp'
+ Plug 'hrsh7th/cmp-nvim-lsp'
+ Plug 'L3MON4D3/LuaSnip'
+
+ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
 
 " Custom language related plugins
 Plug 'tjdevries/nlua.nvim'          " Lua development
@@ -271,10 +282,10 @@ endif
 " let g:airline_theme = 'sunbather'
 
 " colorscheme srcery
- colorscheme vim-monokai-tasty
+" colorscheme vim-monokai-tasty
 
 " Onehalf
- set background=light
+" set background=light
 " colorscheme onehalflight
 " set background=dark
 " colorscheme gruvbox
@@ -283,10 +294,17 @@ endif
 " let g:airline_theme = 'onehalfdark'
 
 " Solarized config
-" set background=light
 " let g:solarized_termtrans = 1
 " let g:solarized_termcolors = 256
 " colorscheme solarized
+
+" Onedark
+" custom theme config
+let g:onedark_config = {
+    \ 'style': 'deep',
+    \ 'toggle_style_key': '<leader>ts',
+\}
+colorscheme onedark
 
 " Airline theme
 
@@ -457,6 +475,10 @@ noremap <C-p> gT
 " Vimtex
 let g:tex_flavor = 'latex'
 let g:vimtex_mappings_enabled = 0
+
+" Run affected test via Captools (Capchase specific)
+nnoremap <Leader>ta :!/Users/lorenzodelrossi/Documents/GitHub/captools/target/release/captools test -a<CR>
+nnoremap <Leader>nf :e %:h/
 
 " for Windows
 if has("win32")
