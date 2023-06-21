@@ -169,6 +169,12 @@ Plug 'wincent/terminus'
 
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
+" Folding
+Plug 'pedrohdz/vim-yaml-folds'
+
+" Show fancy indentation
+Plug 'Yggdroot/indentLine'
+
 " nvim v0.7.2
 Plug 'kdheepak/lazygit.nvim'
 
@@ -249,6 +255,13 @@ endif
 " C/C++ related
 " Enable Clang auto fromatting on C based languages
 autocmd FileType c,cpp,objc ClangFormatAutoEnable
+
+" YAML
+autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
+let g:indentLine_char = '⦙'
+" Start with unfolded yamls
+set foldlevelstart=20
+
 
 " Javascript formatting
 " autocmd BufWritePre *.js :normal mpgg=G`p
@@ -469,8 +482,10 @@ noremap <A-j> <C-w>j
 noremap <A-k> <C-w>k
 
 " Remap changing tab to Ctrl+n(ext)/p(revious)
-noremap <C-n> gt
-noremap <C-p> gT
+" noremap <C-n> gt
+" noremap <C-p> gT
+noremap à gt
+noremap ò gT
 
 " Vimtex
 let g:tex_flavor = 'latex'
