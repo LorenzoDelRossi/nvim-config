@@ -439,6 +439,7 @@ map <Leader>c :NvimTreeToggle<CR>
 " Fuzzy related
 map <Leader>o :GFiles<CR>
 map <Leader>O :tabnew<CR>:GFiles<CR>
+map <Leader>S :vsplit<CR>:GFiles<CR>
 map <Leader>p :Files<CR>
 map <Leader>rg :Rg<SPACE>
 
