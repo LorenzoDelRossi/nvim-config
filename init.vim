@@ -262,6 +262,8 @@ let g:indentLine_char = '⦙'
 " Start with unfolded yamls
 set foldlevelstart=20
 
+" Make JSON foldable
+autocmd FileType json set foldmethod=syntax
 
 " Javascript formatting
 " autocmd BufWritePre *.js :normal mpgg=G`p
