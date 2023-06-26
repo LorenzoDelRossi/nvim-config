@@ -178,6 +178,9 @@ Plug 'Yggdroot/indentLine'
 " nvim v0.7.2
 Plug 'kdheepak/lazygit.nvim'
 
+" Fold code
+Plug 'pseewald/vim-anyfold'
+
 call plug#end()
 
 let g:has_coc = 0
@@ -251,6 +254,10 @@ let g:blamer_relative_time = 1
 if has("win32")
     let g:python3_host_prog = 'C:\Users\2pac\scoop\apps\python\current\python.EXE'
 endif
+
+" Activate folding for all filetypes
+autocmd Filetype * AnyFoldActivate 
+set foldlevel=99
 
 " C/C++ related
 " Enable Clang auto fromatting on C based languages
