@@ -322,11 +322,15 @@ endif
 
 " Onedark
 " custom theme config
-let g:onedark_config = {
-    \ 'style': 'deep',
-    \ 'toggle_style_key': '<leader>ts',
-\}
-colorscheme onedark
+" let g:onedark_config = {
+"     \ 'style': 'deep',
+"     \ 'toggle_style_key': '<leader>ts',
+" \}
+" colorscheme onedark
+
+set background=dark
+colorscheme PaperColor
+let g:airline_theme='papercolor'
 
 " Airline theme
 
