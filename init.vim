@@ -42,7 +42,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'jiangmiao/auto-pairs'
 
 " Coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile', 'branch': 'master'}
 
 " Git
@@ -83,9 +83,9 @@ Plug 'puremourning/vimspector'
 " Neovim built in LSP
  Plug 'neovim/nvim-lspconfig'
  Plug 'tjdevries/lsp_extensions.nvim'
- Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
- Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
+ " Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
  Plug 'williamboman/mason-lspconfig.nvim'
+ Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
  " Autocompletion
@@ -183,19 +183,6 @@ Plug 'pseewald/vim-anyfold'
 
 call plug#end()
 
-let g:has_coc = 0
-if g:has_coc
-    if has("win32")
-        source ~\AppData\Local\nvim\coc.vim
-    elseif has("unix")
-        source ~/.config/nvim/coc.vim
-    endif
-endif
-
-" if has("mac")
-"     let g:python3_host_prog = expand('/usr/local/opt/python@3.8/bin/python3.8')
-" endif
-
 " LSP related
  lua require('init')
 
@@ -219,7 +206,7 @@ if g:use_nvim_lsp
 
     augroup NvimLSP
         autocmd!
-        autocmd BufWritePre *.py,*.rs,*.ex,*.js,*.ts lua vim.lsp.buf.formatting_sync(nil, 2000)
+"        autocmd BufWritePre *.py,*.rs,*.ex,*.js,*.ts lua vim.lsp.buf.formatting_sync(nil, 2000)
         " autocmd BufEnter,BufWritePost *.rs lua require('lsp_extensions.inlay_hints').request { aligned = true, prefix = " » " }
     augroup END
 
@@ -230,7 +217,7 @@ end
 
 " Golang related
 " Autoformat
-autocmd BufWritePre *.go lua goimports(2000)
+" autocmd BufWritePre *.go lua goimports(2000)
 " Jump to Test files
 autocmd FileType go nnoremap <silent> gts <cmd>lua go_switch()<CR>
 
@@ -330,7 +317,7 @@ endif
 
 set background=dark
 colorscheme PaperColor
-let g:airline_theme='papercolor'
+" let g:airline_theme='papercolor'
 
 " Airline theme
 
@@ -486,14 +473,6 @@ if has("win32")
     noremap <A-c> "*y
     noremap <A-v> "*p
 endif
-
-" Splits config
-
-" Remap changing split to Alt+hjkl
-noremap <A-l> <C-w>l
-noremap <A-h> <C-w>h
-noremap <A-j> <C-w>j
-noremap <A-k> <C-w>k
 
 " Remap changing tab to Ctrl+n(ext)/p(revious)
 " noremap <C-n> gt
