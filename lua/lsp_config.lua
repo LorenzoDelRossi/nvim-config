@@ -9,6 +9,8 @@ lsp.ensure_installed({
 	'jsonls',
 	'clangd',
 	'elixirls',
+	'eslint',
+	'stylelint_lsp',
 	'vimls',
 	'pyright',
 	'gopls',
@@ -21,8 +23,9 @@ lsp.format_on_save({
 		["gopls"] = { "go" },
 		["lua_ls"] = { "lua" },
 		["rust_analyzer"] = { "rust" },
-		-- ["eslint"] = { "javascript" },
-		-- ["eslint"] = { "typescript" },
+		["eslint"] = { "javascript" },
+		["eslint"] = { "typescript" },
+		["eslint"] = { "typescriptreact" },
 	},
 })
 
