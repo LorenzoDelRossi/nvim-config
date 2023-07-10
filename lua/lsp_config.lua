@@ -23,9 +23,9 @@ lsp.format_on_save({
 		["gopls"] = { "go" },
 		["lua_ls"] = { "lua" },
 		["rust_analyzer"] = { "rust" },
-		["eslint"] = { "javascript" },
-		["eslint"] = { "typescript" },
-		["eslint"] = { "typescriptreact" },
+		["eslint"] = { "javascript", "typescript", "typescriptreact" },
+		["stylelint_lsp"] = { "typescriptreact" },
+		["stylelint"] = { "typescriptreact" },
 	},
 })
 
