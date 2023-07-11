@@ -421,8 +421,8 @@ vnoremap <F1> <esc>
 nnoremap 0 ^
 
 " Move lines
-nnoremap N :m .+1<CR>==
-nnoremap M :m .-2<CR>==
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
 
 " Disable the search highlig.
 nnoremap <esc> :noh<return><esc>
