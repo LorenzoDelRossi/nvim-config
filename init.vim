@@ -128,6 +128,10 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'eslint/eslint'
 
+" Ts
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
+
 " Python
 Plug 'fisadev/vim-isort'
 Plug 'HallerPatrick/py_lsp.nvim'
@@ -279,10 +283,9 @@ if (has("termguicolors"))
 endif
 
 " Theme :3
-" set background=dark
-" colorscheme tender
-" let g:airline_theme = 'tender'
-
+set background=dark
+colorscheme tender
+let g:airline_theme = 'tender'
 " set background=dark
 " colorscheme nord
 " let g:airline_theme = 'nord'
@@ -316,8 +319,8 @@ endif
 " \}
 " colorscheme onedark
 
-set background=dark
-colorscheme PaperColor
+" set background=dark
+" colorscheme PaperColor
 " let g:airline_theme='papercolor'
 
 " Airline theme
