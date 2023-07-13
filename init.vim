@@ -136,6 +136,15 @@ Plug 'leafgarland/typescript-vim'
 Plug 'fisadev/vim-isort'
 Plug 'HallerPatrick/py_lsp.nvim'
 
+" GitHub Actions
+Plug 'yasuhiroki/github-actions-yaml.vim'
+
+" Terraform
+Plug 'hashivim/vim-terraform'
+
+" Handlebars
+Plug 'mustache/vim-mustache-handlebars'
+
 " Dataform
 Plug 'andres-lowrie/vim-sqlx'
 
