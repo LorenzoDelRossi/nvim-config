@@ -4,6 +4,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
+  view = {
+    width = 40,
+  },
   renderer = {
     icons = {
       show = {
@@ -29,9 +32,9 @@ require("nvim-tree").setup({
       },
     },
   },
-  git = { 
-    ignore = false, 
-    },
+  git = {
+    ignore = false,
+  },
   filters = {
     dotfiles = false,
   },

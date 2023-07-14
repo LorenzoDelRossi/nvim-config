@@ -191,6 +191,9 @@ Plug 'Yggdroot/indentLine'
 " nvim v0.7.2
 Plug 'kdheepak/lazygit.nvim'
 
+" Tabnine
+Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
+
 " Fold code
 Plug 'pseewald/vim-anyfold'
 
