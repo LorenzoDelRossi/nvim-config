@@ -194,6 +194,9 @@ Plug 'kdheepak/lazygit.nvim'
 " Tabnine
 Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
+" Color pair brackets
+Plug 'bounceme/poppy.vim'
+
 " Fold code
 Plug 'pseewald/vim-anyfold'
 
@@ -237,6 +240,9 @@ end
 " autocmd BufWritePre *.go lua goimports(2000)
 " Jump to Test files
 autocmd FileType go nnoremap <silent> gts <cmd>lua go_switch()<CR>
+
+" When we move the cursor we activate the bracket colorizing
+au! cursormoved * call PoppyInit()
 
 " Ziglang related
 " Autoformatting
