@@ -81,19 +81,19 @@ Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
 
 " Neovim built in LSP
- Plug 'neovim/nvim-lspconfig'
- Plug 'tjdevries/lsp_extensions.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'tjdevries/lsp_extensions.nvim'
  " Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
- Plug 'williamboman/mason-lspconfig.nvim'
- Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
- Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
  " Autocompletion
- Plug 'hrsh7th/nvim-cmp'
- Plug 'hrsh7th/cmp-nvim-lsp'
- Plug 'L3MON4D3/LuaSnip'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
 
- Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
 
 " Custom language related plugins
 Plug 'tjdevries/nlua.nvim'          " Lua development
@@ -196,6 +196,9 @@ Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 " Color pair brackets
 Plug 'bounceme/poppy.vim'
+
+" Highlight occurrences for text under cursor
+Plug 'itchyny/vim-cursorword'
 
 " Fold code
 Plug 'pseewald/vim-anyfold'
