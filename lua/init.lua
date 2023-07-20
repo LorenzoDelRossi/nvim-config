@@ -27,6 +27,6 @@ return init({
         'finder',
         'terminal',
         'tree',
-        'tabnine-nvim',
+        -- 'tabnine-nvim',
     }
 })

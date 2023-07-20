@@ -200,6 +200,9 @@ Plug 'bounceme/poppy.vim'
 " Highlight occurrences for text under cursor
 Plug 'itchyny/vim-cursorword'
 
+"Copilot
+Plug 'github/copilot.vim'
+
 " Fold code
 Plug 'pseewald/vim-anyfold'
 
@@ -586,3 +589,14 @@ nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
 nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
 nnoremap gR <cmd>TroubleToggle lsp_references<cr>
+
+
+" Copilot
+imap <silent><script><expr> ù copilot#Accept("\<CR>")
+imap <C-=> <Plug>(copilot-next)
+imap <C--> <Plug>(copilot-previous)
+imap <C-\> <Plug>(copilot-suggest)
+
+let g:copilot_no_tab_map = v:true
+
+highlight CopilotSuggestion guifg=#555555 ctermfg=8
